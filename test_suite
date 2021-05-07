@@ -1,0 +1,12 @@
+Test Suite
+
+1.) Se il nome del file inserito non esiste o non sta nella directory corretta,
+ritorna un errore;
+
+2.) Se inseriamo un numero minore di 0 o maggiore della dimensione della lista,
+ritorna un errore;
+
+3.) Se leggiamo il file più di una volta, quando cerchiamo di ritirare un valore dalla lista,
+ritorna un errore;
+
+
