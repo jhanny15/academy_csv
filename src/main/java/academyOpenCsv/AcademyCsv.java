@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -44,12 +45,13 @@ public class AcademyCsv {
 
     /**
      * Costruttore pubblico di AcademyCsv
-     * che initializza il fileReader, bufferedReader e csvReader
+     * che initializza la lista, il fileReader, il bufferedReader e il csvReader
      * @param fileName il file csv
      * @throws FileNotFoundException se non trova il file
      */
     public AcademyCsv(String fileName) throws FileNotFoundException {
         this.fileName = fileName;
+        list = new ArrayList<>();
         fileReader = new FileReader(filePath + fileName);
         bufferedReader = new BufferedReader(fileReader, buffSize);
         csvReader = new CSVReader(bufferedReader);
@@ -72,7 +74,5 @@ public class AcademyCsv {
     public String get(int i) {
         return Arrays.toString(list.get(i));
     }
-
-
 
 }
