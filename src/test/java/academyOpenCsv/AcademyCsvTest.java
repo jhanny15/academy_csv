@@ -13,8 +13,7 @@ class AcademyCsvTest {
 
     @Test // 1.) Da correggere
     void fileNotFound() throws IOException, CsvException{
-        AcademyCsv reader = new AcademyCsv("uer.csv");
-        assertThrows(FileNotFoundException.class, () -> reader.read() );
+        assertThrows(FileNotFoundException.class, () -> new AcademyCsv("uer.csv"));
     }
 
     @Test // 2.)
